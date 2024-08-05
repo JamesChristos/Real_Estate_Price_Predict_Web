@@ -1,0 +1,28 @@
+.f-container{
+    justify-content: space-between;
+}
+
+.f-left{
+    display: flex;
+    align-items: left;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.f-menu {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .f-container {
+        flex-direction: column;
+    }
+    .f-container>div {
+        align-items: center!important;
+        text-align: center;
+    }
+}

@@ -1,0 +1,194 @@
+.hero-wrapper {
+  color: black;
+  position: relative;
+  padding-bottom: 2rem;
+  background-color: #ffff;
+}
+
+.hero-container {
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* left Side */
+.hero-left {
+  gap: 3rem;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title > h1 {
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
+
+.hero-des {
+  margin-top: -30px;
+}
+
+.stats {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.stat > :nth-child(1) {
+  font-size: 2rem;
+}
+
+.stat > :nth-child(1) > :last-child {
+  color: rgb(0, 85, 205);
+}
+
+/* right Side */
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
+}
+
+.image-container2 {
+  width: 40rem;
+  height: 35rem;
+  overflow: hidden;
+}
+
+.image-container2 > img {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+/* Base styles for shapes */
+.shape {
+  position: absolute;
+  opacity: 0.9;
+  animation: shine 2s infinite linear;
+  background: linear-gradient(45deg, #fff, #000);
+  background-size: 400%;
+}
+
+/* Define shapes similar to the provided image */
+.shape1 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    45deg,
+    #ff69b4,
+    #ff1493
+  ); /* Pink color gradient */
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+}
+
+.shape2 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    45deg,
+    #1e90ff,
+    #00bfff
+  ); /* Blue color gradient */
+  border-radius: 20%;
+  top: 20%;
+  left: 60%;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    45deg,
+    #00fa9a,
+    #7fff00
+  ); /* Green color gradient */
+  border-radius: 30%;
+  bottom: 1%;
+  left: 25%;
+}
+
+.shape4 {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(
+    45deg,
+    #ffd700,
+    #ffb700
+  ); /* Yellow color gradient */
+  border-radius: 50% 0 50% 0; /* Custom shape with rounded corners */
+  bottom: 30%;
+  right: 5%;
+}
+
+.shape5 {
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(
+    45deg,
+    #ff4500,
+    #ff6347
+  ); /* Orange color gradient */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle */
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    margin-top: 2rem;
+  }
+  .hero-title > h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-top: 50px;
+  }
+  .orange-circle {
+    height: 4rem;
+    width: 4rem;
+    background: var(--orange-gradient);
+    border-radius: 999px;
+    position: absolute;
+    right: 60%;
+    top: 10%;
+    z-index: -1;
+  }
+  .image-container2 {
+    display: none;
+  }
+  .stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .hero-right {
+    width: 100%;
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.5rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
